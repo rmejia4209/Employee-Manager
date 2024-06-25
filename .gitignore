@@ -1,0 +1,11 @@
+# OS Files
+.DS_Store
+
+# IDE files
+.vscode
+
+# Module folders
+*node_modules
+
+*.env
+*.next
