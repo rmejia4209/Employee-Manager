@@ -1,26 +1,17 @@
-import { employees } from "@/temp-data/employees";
-import EmployeeCard from "./components/employee_card"
-import Month from "./components/month";
-import Calendar from "./components/calendar";
-
-
-async function getData() {
-  const url = "https://66798afa18a459f639505cdf.mockapi.io/api/v1/employees"
-  const res = await fetch(url)
-
-  if (!res.ok) {
-    throw new Error("Failed to get data");
-  }
-  return res.json()
-}
+import Calendar from "../components/calendar/TimeOffCalendar";
+//import MyButton from "../components/my_button"
 
 
 export default async function Home() {
-  const data = await getData();
+  //const data = await getData();
   return (
-    <div className="w-1/2">
-      <Calendar/>
-    </div>
-
+    <>
+      <div className="w-1/2 float-left">
+        <Calendar/>
+      </div>
+      <div className="w-1/2 px-6 float-right">
+        {/*<MyButton/>*/}
+      </div>
+    </>
   );
 }
